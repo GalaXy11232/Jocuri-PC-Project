@@ -9,8 +9,9 @@
 }
 
 body {
+    padding: 0;
+    margin: 0;
     color: white;
-    background-image: url("Images/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
