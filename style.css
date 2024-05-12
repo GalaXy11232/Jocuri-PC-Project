@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "Gange";
+    src: url("Fonts/Panipuri.ttf");
+}
+
+@font-face {
+    font-family: "Indus";
+    src: url("Fonts/BalooThambi-Regular.ttf");
+}
+
+body {
+    color: white;
+    background-image: url("Images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    min-height: 200px;
+    background-color: gray;
+    border-radius: 15px;
+    width: 95%;
+}
+
+
+.content-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    font-size: 125%;
+    font-family: "Indus";
+    background-color: aqua;
+}
+
+.content-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: red;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+    min-width: 200px;
+    transition: .25s ease;
+}
+.content-item:hover {
+    cursor: pointer;
+    font-size: 115%;
+    box-shadow: 0 0 10px 5px black;
+}
+
+.downbar {
+    
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+	position: absolute;
+	bottom: 0;
+	margin: auto;
+	width: 100%;
+	background-color: black;
+	color: white;
+    font-size: 150%;
+    min-height: 75px;
+}
+
+
+.title {
+    margin-top: 25px;
+	text-align: center;
+	font-size: 225%;	
+    font-family: 'Gange';
+}
