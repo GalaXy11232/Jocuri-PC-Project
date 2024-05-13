@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: "Typewriter";
-    src: url("Fonts/JMH\ Typewriter\ dry.otf");
+    src: url("Fonts/Typewriter-Bold.ttf");
 }
 
 body {
@@ -24,9 +24,9 @@ body {
 
 #csgo-c {
     display: block;
-    text-align: center;
     background-color: rgba(100, 100, 100, 0.64);
     border: 7px solid rgb(50, 50, 50);
+    padding: 0 15px 0 15px;
 }
 
 .content {
@@ -91,4 +91,8 @@ body {
 	text-align: center;
 	font-size: 225%;	
     font-family: 'Gange';
+}
+
+.txtspacer {
+    text-indent: 100px;
 }
