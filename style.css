@@ -13,14 +13,33 @@
     src: url("Fonts/Typewriter-Bold.ttf");
 }
 
+@keyframes present-bxs {
+    0% {box-shadow: 0 0 10px 5px gray;}
+    50% {box-shadow: 0 0 20px 5px white;}
+    100% {box-shadow: 0 0 10px 5px gray;}
+}
+
 body {
     padding: 0;
     margin: 0;
     color: white;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
+
+#present {
+    display: block;
+    text-align: center;
+    background-color: rgb(50, 50, 50);
+    box-shadow: 0 0 10px 5px gray;
+    padding: 5px 10px 5px 10px;
+    animation: present-bxs 2.5s;
+    animation-iteration-count: infinite;
+
+}
 
 #csgo-c {
     display: block;
@@ -72,10 +91,11 @@ body {
 }
 
 .downbar {
+    position: sticky;
+    align-self: flex-start;
 	display: flex;
     justify-content: space-around;
     align-items: center;
-	position: absolute;
 	bottom: 0;
 	margin: auto;
 	width: 100%;
@@ -91,6 +111,13 @@ body {
 	text-align: center;
 	font-size: 225%;	
     font-family: 'Gange';
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 150%;	
+    font-family: 'Gange';
+    
 }
 
 .txtspacer {
