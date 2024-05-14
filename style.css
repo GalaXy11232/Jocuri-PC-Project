@@ -13,10 +13,10 @@
     src: url("Fonts/Typewriter-Bold.ttf");
 }
 
-@keyframes present-bxs {
-    0% {box-shadow: 0 0 10px 5px gray;}
-    50% {box-shadow: 0 0 20px 5px white;}
-    100% {box-shadow: 0 0 10px 5px gray;}
+@keyframes btnbreathe {
+    0% {box-shadow: 0 0 10px 5px gray; font-size: 100%;}
+    50% {box-shadow: 0 0 20px 10px black; font-size: 110%;}
+    100% {box-shadow: 0 0 10px 5px gray; font-size: 100%;}
 }
 
 body {
@@ -24,7 +24,7 @@ body {
     margin: 0;
     color: white;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover !important;
     background-position: center;
     background-attachment: fixed;
 }
@@ -36,8 +36,7 @@ body {
     background-color: rgb(50, 50, 50);
     box-shadow: 0 0 10px 5px gray;
     padding: 5px 10px 5px 10px;
-    animation: present-bxs 2.5s;
-    animation-iteration-count: infinite;
+    /* animation: present-bxs 2.5s linear infinite; */
 
 }
 
@@ -87,11 +86,43 @@ body {
 .content-item:hover {
     cursor: pointer;
     font-size: 115%;
-    box-shadow: 0 0 10px 5px black;
+    animation: btnbreathe 2.5s linear infinite;
+}
+
+#vid-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#vid {
+    left: 0;
+    width: 640px;
+    height: 360px;
+    background-color: #fff;
+    border: 20px solid black;
+    transition: 1s ease;
+}
+
+
+#vid-hands {
+    display: flex; 
+    justify-content: space-around; 
+    justify-items: center;
+    align-items: center; 
+    flex-direction: column; 
+    width: 400px;
+    left: 0;
+    transition: 1s ease;
+}
+
+#video {
+    width: 640px;
+    height: 360px;
+    object-fit: fill;
 }
 
 .downbar {
-    position: sticky;
+    position: fixed;
     align-self: flex-start;
 	display: flex;
     justify-content: space-around;
