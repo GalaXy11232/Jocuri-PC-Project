@@ -34,7 +34,7 @@ window.addEventListener("load", () => {
             vidPaused = false;
         }
         vidBar.style.opacity = 0;
-        vidHands.style.marginLeft = `-${1208 - 25 - 768 - 100}px`; // Total - vidBar - vidWidth - spatiu pentru vidHands (MAX 415 ca altfel da >0)
+        vidHands.style.marginLeft = `-${1208 - 25 - 768 - 150}px`; // Total - vidBar - vidWidth - spatiu pentru vidHands (MAX 415 ca altfel da >0)
     })
 
     vidContainer.addEventListener("mouseleave", () => { if (vidPaused) {vidHands.style.marginLeft = "-1208px"; vidBar.style.opacity = 1;} }) 
