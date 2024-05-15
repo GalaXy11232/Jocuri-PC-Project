@@ -40,7 +40,7 @@ body {
 
 }
 
-#csgo-c {
+#block-c {
     display: block;
     background-color: rgba(100, 100, 100, 0.64);
     border: 7px solid rgb(50, 50, 50);
@@ -94,10 +94,19 @@ body {
     flex-direction: row;
 }
 
+#vid-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    width: 25px;
+    transition: 1s ease;
+}
+
 #vid {
     left: 0;
-    width: 640px;
-    height: 360px;
+    width: 768px;
+    height: 432px;
     background-color: #fff;
     border: 20px solid black;
     transition: 1s ease;
@@ -112,12 +121,13 @@ body {
     flex-direction: column; 
     width: 400px;
     left: 0;
+    margin-left: -1208px;
     transition: 1s ease;
 }
 
 #video {
-    width: 640px;
-    height: 360px;
+    width: 768px;
+    height: 432px;
     object-fit: fill;
 }
 

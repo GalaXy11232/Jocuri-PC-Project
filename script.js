@@ -22,19 +22,25 @@ window.addEventListener("load", () => {
     const vidHands = document.getElementById("vid-hands");
     const vidContainer = document.getElementById("vid-container");
     const video = document.getElementById("video");
+    const vidBar = document.getElementById("vid-bar");
     var vidActive = false;
+    var vidPaused = true;
 
-    vidHands.style.marginLeft = "-1050px";
-    vidDiv.addEventListener("mouseenter", (ev) => {
+    // vidHands.style.marginLeft = "-1208px";   <-- merge greu
+    vidBar.addEventListener("mouseenter", () => {
         if (!vidActive) {
             video.autoplay = true; video.load();
             vidActive = true;
+            vidPaused = false;
         }
-        vidHands.style.marginLeft = "0px"; 
+        vidBar.style.opacity = 0;
+        vidHands.style.marginLeft = `-${1208 - 25 - 768 - 100}px`; // Total - vidBar - vidWidth - spatiu pentru vidHands (MAX 415 ca altfel da >0)
     })
 
-    vidContainer.addEventListener("mouseleave", (ev) => {vidHands.style.marginLeft = "-1050px";}) // sau video autoplay on mouse enter si onpause sau onend -> mouseleave
-    video.addEventListener("ended", (ev) => {vidActive = false; vidHands.style.marginLeft = "-1050px";})
+    vidContainer.addEventListener("mouseleave", () => { if (vidPaused) {vidHands.style.marginLeft = "-1208px"; vidBar.style.opacity = 1;} }) 
+    video.addEventListener("ended", () => {vidActive = false; vidHands.style.marginLeft = "-1208px"; vidBar.style.opacity = 1;})
+    video.addEventListener("pause", () => {vidPaused = true;})
+    video.addEventListener("play", () => {vidPaused = false;})
 })
 
 
