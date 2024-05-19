@@ -30,6 +30,7 @@ window.addEventListener("load", () => {
     vidBar.addEventListener("mouseenter", () => {
         if (!vidActive) {
             video.autoplay = true; video.load();
+            video.muted = !video.muted
             vidActive = true;
             vidPaused = false;
         }
@@ -43,7 +44,29 @@ window.addEventListener("load", () => {
     video.addEventListener("play", () => {vidPaused = false;})
 })
 
+var soundboard = ["1", "2", "3"];
+var audio;
+
+document.addEventListener("keypress", (ev) => {
+
+    if (ev.key == soundboard[0]) 
+        playAudio("Audios/Vine-boom-sound-effect.mp3", 0.5);
+
+    if (ev.key == soundboard[1]) 
+        playAudio("Audios/extremely-loud-incorrect-buzzer.mp3", 0.25);
+
+    if (ev.key == soundboard[2]) 
+        playAudio("Audios/correct.mp3", 0.5);
+})
+
 
 function goto(link) {
     window.location.href = link;
+}
+
+function playAudio(aud, vol) {
+    audio = new Audio(aud);
+    audio.volume = vol;
+    audio.load();
+    audio.play();
 }
