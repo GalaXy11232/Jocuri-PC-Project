@@ -1,4 +1,5 @@
 window.addEventListener("load", () => {
+
     setTimeout(() => {
         const l1 = document.getElementById("dbl11"); l1.style.transition = ".5s";
         const l2 = document.getElementById("dbl12"); l2.style.transition = ".5s";
@@ -44,7 +45,7 @@ window.addEventListener("load", () => {
     video.addEventListener("play", () => {vidPaused = false;})
 })
 
-var soundboard = ["1", "2", "3"];
+var soundboard = ["1", "2", "3", "4", "0"];
 
 document.addEventListener("keypress", (ev) => {
 
@@ -56,6 +57,14 @@ document.addEventListener("keypress", (ev) => {
 
     if (ev.key == soundboard[2]) 
         playAudio("Audios/correct.mp3", 0.5, 3);
+
+    if (ev.key == soundboard[3])
+        playAudio("Audios/nerd.mp3", 0.5, 4);
+
+    if (ev.key == soundboard[4])
+        playAudio("Audios/fireingaura.mp3", 0.5, 5);
+
+    if (ev.key == " ") console.log(localStorage.getItem("addAvail"));
 })
 
 
@@ -88,6 +97,8 @@ function soundImage(soundID) {
     if (soundID == 1) image.src = "https://emojiisland.com/cdn/shop/products/7_large.png?v=1571606116";
     if (soundID == 2) image.src = "https://static-00.iconduck.com/assets.00/cross-mark-emoji-1019x1024-8iz17ya4.png";
     if (soundID == 3) image.src = "https://assets.streamlinehq.com/image/private/w_200,h_200,ar_1/f_auto/v1/icons/kawaii-emoji/-symbols/-symbols/u+2714-relcbqqxhecnppvjy5qw8i.png?_a=DAJFJtWIZAAC";
+    if (soundID == 4) image.src = "https://static-00.iconduck.com/assets.00/nerd-face-emoji-1024x1024-ntsqgw6q.png";
+    if (soundID == 5) image.src = "Images/normal.png";
 
     
     document.body.appendChild(image);
