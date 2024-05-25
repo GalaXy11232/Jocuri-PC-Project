@@ -30,6 +30,16 @@ body {
 }
 
 
+#reclama {
+    box-shadow: 0 0 15px 1px white;
+    visibility: hidden;
+    position: fixed; 
+    right: 2.5%; 
+    width: 25%; 
+    height: 85%;
+    object-fit: cover;
+}
+
 #present {
     display: block;
     text-align: center;
@@ -165,6 +175,11 @@ body {
 	text-align: center;
 	font-size: 225%;	
     font-family: 'Gange';
+}
+
+#game {
+    color: aliceblue; 
+    font-family: "Gange";
 }
 
 .subtitle {
