@@ -192,3 +192,17 @@ body {
 .txtspacer {
     text-indent: 100px;
 }
+
+.tier {outline: medium solid black;}
+.tierlist tr, td {outline: medium solid black; padding: 5px 0 5px 0;}
+.tierlist {
+    margin: auto;
+    width: 400px;
+    text-align: center;
+    background-color: #1a1a18;
+    font-size: 120%;
+    font-weight: bolder;
+    font-family: "Helvetica";
+    color: black;
+    box-shadow: 0 0 10px 2.5px white;
+}
