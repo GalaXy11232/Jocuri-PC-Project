@@ -169,7 +169,6 @@ body {
     min-height: 50px;
 }
 
-
 .title {
     margin-top: 25px;
 	text-align: center;
@@ -205,4 +204,18 @@ body {
     font-family: "Helvetica";
     color: black;
     box-shadow: 0 0 10px 2.5px white;
+}
+
+#mcanom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    z-index: 100;
+    margin: auto;
+    opacity: 0;
+    width: 95%;
+    height: 95%;
+    text-align: center;
+    transition: 1s ease;
 }

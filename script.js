@@ -1,11 +1,12 @@
 window.addEventListener("load", () => {
-
+    // console.log(window.location.pathname.split('/').pop())
     setTimeout(() => {
         const l1 = document.getElementById("dbl11"); l1.style.transition = ".5s";
         const l2 = document.getElementById("dbl12"); l2.style.transition = ".5s";
         const l3 = document.getElementById("dbl21"); l3.style.transition = ".5s";
         const l4 = document.getElementById("dbl22"); l4.style.transition = ".5s";
         var ls = [l1, l2, l3, l4];
+        
         
         for (let i = 1; i < 5; i = i + 2) {
             ls[i].style.opacity = 0; ls[i - 1].style.opacity = 0;
@@ -15,9 +16,25 @@ window.addEventListener("load", () => {
                 ls[i].style.opacity = 1; ls[i - 1].style.opacity = 1;
             }, 500)
         }
-
     }, 7000)
 
+    if (window.location.pathname.split('/').pop() == "index.html") {
+        const mucur = document.createElement("img"); mucur.setAttribute("id", "mcanom");
+
+        mucur.src = "https://media.discordapp.net/attachments/1153349989586718751/1218609053148905595/image.png?ex=6658b49e&is=6657631e&hm=737686a4088855f5ef78d65e8331c7f8a2572a7bb82014d17a9df21e3b1de5ab&=&format=webp&quality=lossless";
+        mucur.style.opacity = 0;
+
+        setTimeout(() => {
+            document.body.appendChild(mucur);
+            setTimeout(() => {
+                mucur.style.opacity = 0.6;
+                setTimeout(() => {
+                    mucur.style.opacity = 0;
+                    setTimeout(() => {document.body.removeChild(mucur);}, 1100);
+                }, 1000);
+            }, 100)
+        }, 9000)
+    }
     
     const vidDiv = document.getElementById("vid"); 
     const vidHands = document.getElementById("vid-hands");
