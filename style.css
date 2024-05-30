@@ -154,6 +154,17 @@ body {
     object-fit: fill;
 }
 
+#ppy {
+    margin: auto; 
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    top: 25px;
+    width: 250px;
+    opacity: 0;
+    transition: 3s ease;
+}
+
 .downbar {
     position: fixed;
     align-self: flex-start;

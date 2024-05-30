@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-    // console.log(window.location.pathname.split('/').pop())
+    console.log(window.location.pathname.split('/').pop())
     setTimeout(() => {
         const l1 = document.getElementById("dbl11"); l1.style.transition = ".5s";
         const l2 = document.getElementById("dbl12"); l2.style.transition = ".5s";
@@ -35,6 +35,20 @@ window.addEventListener("load", () => {
             }, 100)
         }, 9000)
     }
+
+    if (window.location.pathname.split('/').pop() == "osu.html") {
+        const osu = document.getElementById('ppy');
+        const ceiasta = document.getElementById("ssh");
+        
+        ceiasta.style.opacity = 0; ceiasta.style.transition = "1s ease";
+        osu.style.opacity = 0;
+
+        setTimeout(() => {
+            osu.style.opacity = 1;
+            ceiasta.style.opacity = 1;
+            setTimeout(() => {ceiasta.load(); ceiasta.play();}, 500);
+        }, 2000);
+    }
     
     const vidDiv = document.getElementById("vid"); 
     const vidHands = document.getElementById("vid-hands");
@@ -48,7 +62,7 @@ window.addEventListener("load", () => {
     vidBar.addEventListener("mouseenter", () => {
         if (!vidActive) {
             video.autoplay = true; video.load();
-            video.muted = !video.muted
+            setTimeout(() => {video.muted = !video.muted;}, 100);
             vidActive = true;
             vidPaused = false;
         }
